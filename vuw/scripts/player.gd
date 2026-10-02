@@ -5,6 +5,9 @@ const ACCELLERATION = 4000.0
 const FRICTION = 10
 const JUMP_VELOCITY = -400.0
 
+func _process(delta: float) -> void:
+	if $".".is_paused():
+		print("yes")
 
 func _input(_event: InputEvent) -> void:
 	if InputEvent:

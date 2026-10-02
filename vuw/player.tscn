@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c4re7sh01nhqh"]
+
+[ext_resource type="Script" uid="uid://b1jgk68yeaec3" path="res://scripts/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dak7evsin0qi1" path="res://icon.svg" id="2_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://btr6qct6qe6bc" path="res://control.tscn" id="3_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ddre"]
+size = Vector2(32, 32)
+
+[node name="player" type="CharacterBody2D" unique_id=551150314]
+position = Vector2(0, -16)
+collision_layer = 0
+script = ExtResource("1_onrkg")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1532957467]
+shape = SubResource("RectangleShape2D_7ddre")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2010365791]
+position = Vector2(-5.438924e-07, -4.246831e-07)
+scale = Vector2(0.24999999, 0.2556591)
+texture = ExtResource("2_i3pqv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1259027269]
+
+[node name="Main Menu" parent="." unique_id=1021446545 instance=ExtResource("3_i3pqv")]
+offset_left = -573.096
+offset_top = -323.864
+offset_right = -573.096
+offset_bottom = -323.864

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dxb70ptkv1unf"]
+
+[ext_resource type="Texture2D" uid="uid://c0vgmqokksou" path="res://Screenshot 2026-10-03 111632.png" id="1_ncxyx"]
+
+[node name="Start Screen" type="Node2D" unique_id=1846247393]
+
+[node name="M16 spaceship art" type="Sprite2D" parent="." unique_id=719270704]
+position = Vector2(1436, 823)
+texture = ExtResource("1_ncxyx")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=611029211]
+offset_left = 1329.0
+offset_top = 537.0
+offset_right = 1663.0
+offset_bottom = 733.0
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=1570264143]
+offset_left = 1259.0
+offset_top = 975.0
+offset_right = 1579.0
+offset_bottom = 1169.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=842865842]
+position = Vector2(1431, 818)
+zoom = Vector2(0.405, 0.4)
