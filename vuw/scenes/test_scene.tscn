@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c4re7sh01nhqh" path="res://player.tscn" id="2_j8ivh"]
 [ext_resource type="Texture2D" uid="uid://dak7evsin0qi1" path="res://icon.svg" id="2_nd71p"]
+[ext_resource type="Script" uid="uid://dl78wotmu7b7f" path="res://player.gd" id="3_nd71p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qjeyg"]
 texture = ExtResource("2_nd71p")
@@ -55,4 +56,6 @@ tile_map_data = PackedByteArray("AAABAAAAAQACAAAAAAAAAAEAAQABAAMAAAAAAAAAAQABAAA
 tile_set = SubResource("TileSet_3qnke")
 
 [node name="player" parent="." unique_id=551150314 instance=ExtResource("2_j8ivh")]
+process_mode = 3
 position = Vector2(22, -17)
+script = ExtResource("3_nd71p")
