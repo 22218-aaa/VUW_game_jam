@@ -2,22 +2,24 @@ extends CharacterBody2D
 
 
 #stat vars
-const ACCELLERATION = 4000.0
-const FRICTION = 10
-const JUMP_VELOCITY = -320.0
+const ACCELLERATION: float = 4000.0
+const FRICTION: float = 10.0
+const JUMP_VELOCITY: float = -320.0
 
-var energy = 100.0
-var energy_capacity = 100.0
+var energy: float = 100.0
+var energy_capacity: float = 100.0
 
-var damage = 10.0
-var bullet_speed = 200
-var fire_rate = 0.1
-var loaded = true
+var damage: float = 10.0
+var bullet_speed: float = 200
+var fire_rate: float = 0.1
+var loaded: bool = true
 
 
 # objects
 const BULLET = preload("uid://ciua73xce7h8j")
 @onready var reload_timer: Timer = $reload_timer
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var label: Label = $Label
 
 
 func _input(_event: InputEvent) -> void:
@@ -39,6 +41,8 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	label.text = str(energy) + "/" + str(energy_capacity)
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -68,6 +72,14 @@ func fire():
 	inst.set_collision_mask_value(3, true)
 	loaded = false
 	reload_timer.start(fire_rate)
+
+
+func damaged(bullet_damage):
+	energy -= bullet_damage
+	animation_player.play("damaged")
+	
+	if energy <= 0:
+		get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
 
 
 func _on_reload_timer_timeout() -> void:

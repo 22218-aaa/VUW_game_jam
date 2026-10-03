@@ -1,5 +1,4 @@
 extends Node
-var corridor: CorGuy
 
 @export var energy: float = 100
 @export var energy_capacity: float = 100
