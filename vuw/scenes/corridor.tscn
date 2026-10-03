@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dldh3rb51kdcy"]
 
+[ext_resource type="Script" uid="uid://dav028qf51fj8" path="res://scenes/corridor.gd" id="1_n8bhm"]
 [ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="1_pucmg"]
 [ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://Assets/Background.png" id="2_mus4g"]
 [ext_resource type="PackedScene" uid="uid://tb4fsvifmha1" path="res://scenes/corridor_player.tscn" id="3_7w20u"]
 [ext_resource type="PackedScene" uid="uid://cruavc4av24g1" path="res://scenes/node_2d.tscn" id="4_mus4g"]
+[ext_resource type="PackedScene" uid="uid://crsgvfy1r1fhe" path="res://scenes/shop.tscn" id="6_pblcb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8bhm"]
 texture = ExtResource("1_pucmg")
@@ -2172,6 +2174,7 @@ sources/0 = SubResource("TileSetAtlasSource_n8bhm")
 sources/1 = SubResource("TileSetAtlasSource_pblcb")
 
 [node name="Corridor" type="Node2D" unique_id=1305045761]
+script = ExtResource("1_n8bhm")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=642857749]
 position = Vector2(26, 0)
@@ -2192,3 +2195,6 @@ position_smoothing_enabled = true
 [node name="Node2D" parent="." unique_id=1160824784 instance=ExtResource("4_mus4g")]
 position = Vector2(205.99998, 163.99998)
 scale = Vector2(0.2, 0.2)
+
+[node name="Shop" parent="." unique_id=1733443330 instance=ExtResource("6_pblcb")]
+position = Vector2(295, 110)
