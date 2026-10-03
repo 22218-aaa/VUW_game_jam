@@ -4,7 +4,10 @@ extends CharacterBody2D
 #stat vars
 const ACCELLERATION = 4000.0
 const FRICTION = 10
-const JUMP_VELOCITY = -250.0
+const JUMP_VELOCITY = -320.0
+
+var energy = 100.0
+var energy_capacity = 100.0
 
 var damage = 10.0
 var bullet_speed = 200
@@ -24,6 +27,15 @@ func _input(_event: InputEvent) -> void:
 		if Input.is_action_pressed("shoot"):
 			if loaded:
 				fire()
+
+
+func _ready() -> void:
+	energy = Global.energy
+	energy_capacity = Global.energy_capacity
+	damage = Global.damage
+	bullet_speed = Global.bullet_speed
+	fire_rate = Global.fire_rate
+
 
 
 func _physics_process(delta: float) -> void:
@@ -60,3 +72,11 @@ func fire():
 
 func _on_reload_timer_timeout() -> void:
 	loaded = true
+
+
+func _on_tree_exiting() -> void:
+	Global.energy = energy
+	Global.energy_capacity = energy_capacity
+	Global.damage = damage
+	Global.bullet_speed = bullet_speed
+	Global.fire_rate = fire_rate
