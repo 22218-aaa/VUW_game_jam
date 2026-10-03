@@ -14,6 +14,8 @@ var bullet_speed: float = 200
 var fire_rate: float = 0.1
 var loaded: bool = true
 
+var max_jumps: int = 2
+@onready var jumps: int = max_jumps
 
 # objects
 const BULLET = preload("uid://ciua73xce7h8j")
@@ -37,6 +39,7 @@ func _ready() -> void:
 	damage = Global.damage
 	bullet_speed = Global.bullet_speed
 	fire_rate = Global.fire_rate
+	max_jumps = Global.max_jumps
 
 
 
@@ -46,10 +49,13 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	else:
+		jumps = max_jumps
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and jumps > 0:
 		velocity.y = JUMP_VELOCITY
+		jumps -= 1
 	
 	
 	var direction := Input.get_axis("left", "right")
@@ -92,3 +98,4 @@ func _on_tree_exiting() -> void:
 	Global.damage = damage
 	Global.bullet_speed = bullet_speed
 	Global.fire_rate = fire_rate
+	Global.max_jumps = max_jumps
