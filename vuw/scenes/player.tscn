@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdp0e6vw64a66"]
 
 [ext_resource type="Script" uid="uid://dl78wotmu7b7f" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ddre"]
 size = Vector2(32, 32)
@@ -26,4 +26,5 @@ texture = SubResource("AtlasTexture_qowwa")
 
 [node name="reload_timer" type="Timer" parent="." unique_id=630666183]
 
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="timeout" from="reload_timer" to="." method="_on_reload_timer_timeout"]
