@@ -8,7 +8,7 @@ size = Vector2(4, 4)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rnaij"]
 atlas = ExtResource("2_l5glv")
-region = Rect2(150, 54, 4, 4)
+region = Rect2(136, 24, 8, 8)
 
 [node name="enemy_bullet" type="Area2D" unique_id=1736280005]
 z_index = 1
