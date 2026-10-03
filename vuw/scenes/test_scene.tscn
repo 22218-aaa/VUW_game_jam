@@ -2,9 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b1jgk68yeaec3" path="res://scripts/player.gd" id="1_j8ivh"]
 [ext_resource type="Texture2D" uid="uid://dak7evsin0qi1" path="res://icon.svg" id="2_nd71p"]
+[ext_resource type="Script" uid="uid://3o3bx650ehm1" path="res://scripts/enemy.gd" id="3_7ddre"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="4_qjeyg"]
+[ext_resource type="Script" uid="uid://b7ybmmie3qmiv" path="res://scripts/enemy_bullet.gd" id="5_qjeyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ddre"]
-size = Vector2(32, 32)
+size = Vector2(16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qjeyg"]
 texture = ExtResource("2_nd71p")
@@ -51,11 +54,25 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/1 = SubResource("TileSetAtlasSource_qjeyg")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qnke"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtsjf"]
+atlas = ExtResource("4_qjeyg")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsjf"]
+size = Vector2(4, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnaij"]
+atlas = ExtResource("4_qjeyg")
+region = Rect2(150, 54, 4, 4)
+
 [node name="Node2D" type="Node2D" unique_id=478470449]
 
-[node name="player" type="CharacterBody2D" parent="." unique_id=444192336]
-position = Vector2(0, -16)
-collision_layer = 0
+[node name="player" type="CharacterBody2D" parent="." unique_id=444192336 groups=["player"]]
+position = Vector2(0, -8)
+collision_layer = 2
 script = ExtResource("1_j8ivh")
 metadata/_edit_group_ = true
 
@@ -63,8 +80,8 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_7ddre")
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=817528490]
-position = Vector2(-5.438924e-07, -4.246831e-07)
-scale = Vector2(0.24999999, 0.2556591)
+position = Vector2(2.3841858e-07, -4.7683716e-07)
+scale = Vector2(0.125, 0.12499999)
 texture = ExtResource("2_nd71p")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1371403426]
@@ -72,3 +89,32 @@ texture = ExtResource("2_nd71p")
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=820234930]
 tile_map_data = PackedByteArray("AAABAAAAAQACAAAAAAAAAAEAAQABAAMAAAAAAAAAAQABAAAAAAD+/wAAAQABAAAAAAD//wAAAQACAAAAAAACAAAAAQABAAAAAAADAAAAAQACAAAAAAAEAAAAAQABAAAAAAAFAAAAAQACAAAAAAD+/wEAAQABAAMAAAD//wEAAQACAAMAAAABAAEAAQACAAMAAAACAAEAAQABAAMAAAADAAEAAQACAAMAAAAEAAEAAQABAAMAAAAFAAEAAQACAAMAAADu/wAAAQABAAAAAADv/wAAAQACAAAAAADw/wAAAQABAAAAAADx/wAAAQACAAAAAADy/wAAAQABAAAAAADz/wAAAQACAAAAAAD0/wAAAQABAAAAAAD1/wAAAQACAAAAAAD2/wAAAQABAAAAAAD3/wAAAQACAAAAAAD4/wAAAQABAAAAAAD5/wAAAQACAAAAAAD6/wAAAQABAAAAAAD7/wAAAQACAAAAAAD8/wAAAQABAAAAAAD9/wAAAQACAAAAAADu/wEAAQABAAMAAADv/wEAAQACAAMAAADw/wEAAQABAAMAAADx/wEAAQACAAMAAADy/wEAAQABAAMAAADz/wEAAQACAAMAAAD0/wEAAQABAAMAAAD1/wEAAQACAAMAAAD2/wEAAQABAAMAAAD3/wEAAQACAAMAAAD4/wEAAQABAAMAAAD5/wEAAQACAAMAAAD6/wEAAQABAAMAAAD7/wEAAQACAAMAAAD8/wEAAQABAAMAAAD9/wEAAQACAAMAAAA=")
 tile_set = SubResource("TileSet_3qnke")
+
+[node name="enemy" type="CharacterBody2D" parent="." unique_id=277306273]
+position = Vector2(64, -8)
+collision_layer = 4
+script = ExtResource("3_7ddre")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=457779643]
+shape = SubResource("RectangleShape2D_3qnke")
+
+[node name="Sprite2D" type="Sprite2D" parent="enemy" unique_id=1598471099]
+texture_filter = 1
+texture = SubResource("AtlasTexture_wtsjf")
+
+[node name="Timer" type="Timer" parent="enemy" unique_id=986961463]
+
+[node name="enemy_bullet" type="Area2D" parent="." unique_id=1116973859]
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("5_qjeyg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_bullet" unique_id=190867747]
+shape = SubResource("RectangleShape2D_wtsjf")
+
+[node name="Sprite2D" type="Sprite2D" parent="enemy_bullet" unique_id=1702140856]
+texture = SubResource("AtlasTexture_rnaij")
+
+[connection signal="timeout" from="enemy/Timer" to="enemy" method="_on_timer_timeout"]
+[connection signal="body_entered" from="enemy_bullet" to="enemy_bullet" method="_on_body_entered"]
