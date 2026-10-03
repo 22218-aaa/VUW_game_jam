@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dldh3rb51kdcy"]
+
+[node name="Corridor" type="Node2D" unique_id=1305045761]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=531104333]
+format = 2
