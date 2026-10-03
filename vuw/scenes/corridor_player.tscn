@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://tb4fsvifmha1"]
+
+[ext_resource type="Script" uid="uid://mlaeq81v7xux" path="res://scripts/corridor_player.gd" id="1_f38ot"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="2_cmu66"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc17x"]
+atlas = ExtResource("2_cmu66")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bto3x"]
+radius = 6.0
+height = 16.0
+
+[node name="Corridor Player" type="CharacterBody2D" unique_id=1066082994]
+script = ExtResource("1_f38ot")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2138085071]
+texture_filter = 1
+texture = SubResource("AtlasTexture_gc17x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=198492054]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_bto3x")
