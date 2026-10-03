@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dak7evsin0qi1" path="res://icon.svg" id="2_nd71p"]
 [ext_resource type="Script" uid="uid://3o3bx650ehm1" path="res://scripts/enemy.gd" id="3_7ddre"]
 [ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="4_qjeyg"]
-[ext_resource type="Script" uid="uid://b7ybmmie3qmiv" path="res://scripts/enemy_bullet.gd" id="5_qjeyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ddre"]
 size = Vector2(16, 16)
@@ -61,13 +60,6 @@ size = Vector2(16, 16)
 atlas = ExtResource("4_qjeyg")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsjf"]
-size = Vector2(4, 4)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rnaij"]
-atlas = ExtResource("4_qjeyg")
-region = Rect2(150, 54, 4, 4)
-
 [node name="Node2D" type="Node2D" unique_id=478470449]
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=444192336 groups=["player"]]
@@ -105,16 +97,4 @@ texture = SubResource("AtlasTexture_wtsjf")
 
 [node name="Timer" type="Timer" parent="enemy" unique_id=986961463]
 
-[node name="enemy_bullet" type="Area2D" parent="." unique_id=1116973859]
-collision_layer = 0
-collision_mask = 3
-script = ExtResource("5_qjeyg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_bullet" unique_id=190867747]
-shape = SubResource("RectangleShape2D_wtsjf")
-
-[node name="Sprite2D" type="Sprite2D" parent="enemy_bullet" unique_id=1702140856]
-texture = SubResource("AtlasTexture_rnaij")
-
 [connection signal="timeout" from="enemy/Timer" to="enemy" method="_on_timer_timeout"]
-[connection signal="body_entered" from="enemy_bullet" to="enemy_bullet" method="_on_body_entered"]

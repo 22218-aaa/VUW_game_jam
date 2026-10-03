@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 
+# stats
 var accelleration = 300.0
 var friction = 20.0
 var jump_velocity = -200.0
@@ -9,14 +10,21 @@ var damage = 2.0
 var fire_rate = 1.0
 var bullet_speed = 2.0
 
-
 var atteack_minimum = -1.0 # move to player before this distance
 var attack_maximum = 1000.0 # can't move when further to player tha this
 
-var loaded = true
+# misc
+var loaded = false
 @onready var player = get_tree().get_first_node_in_group("player")
 var player_distance: float = 0.0
 var direction: Vector2 = Vector2.ZERO
+
+# objects
+@onready var timer: Timer = $Timer
+const ENEMY_BULLET = preload("uid://ciua73xce7h8j")
+
+func _ready() -> void:
+	timer.start(fire_rate)
 
 
 func _physics_process(delta: float) -> void:
@@ -43,7 +51,15 @@ func movement(delta):
 
 
 func fire():
-	pass
+	var inst = ENEMY_BULLET.instantiate()
+	inst.damage = damage
+	inst.speed = bullet_speed
+	get_parent().add_child(inst)
+	inst.position = position
+	inst.look_at(player.position)
+	inst.velocity.x = -inst.speed
+	loaded = false
+	timer.start(fire_rate)
 
 
 func damaged(bullet_damage):
