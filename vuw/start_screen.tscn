@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://js6lhenbq44e" path="res://start_screen.gd" id="1_afy8x"]
 [ext_resource type="Texture2D" uid="uid://c0vgmqokksou" path="res://Screenshot 2026-10-03 111632.png" id="1_ncxyx"]
-[ext_resource type="Texture2D" uid="uid://c0g27capaupvp" path="res://Assets/VUW_game_jam_basics.png" id="2_pevhg"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="2_pevhg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rnaij"]
 atlas = ExtResource("2_pevhg")
@@ -20,15 +20,16 @@ region = Rect2(48, 80, 48, 16)
 script = ExtResource("1_afy8x")
 
 [node name="M16 spaceship art" type="Sprite2D" parent="." unique_id=719270704]
-position = Vector2(1436, 823)
+position = Vector2(1432.5, 816)
+scale = Vector2(0.41783217, 0.5539963)
 texture = ExtResource("1_ncxyx")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=611029211]
 texture_filter = 1
-offset_left = 1297.0
-offset_top = 1131.0
-offset_right = 1640.0
-offset_bottom = 1260.0
+offset_left = 1398.0
+offset_top = 990.0
+offset_right = 1655.0
+offset_bottom = 1095.0
 texture_normal = SubResource("AtlasTexture_rnaij")
 texture_pressed = SubResource("AtlasTexture_3qnke")
 texture_hover = SubResource("AtlasTexture_wtsjf")

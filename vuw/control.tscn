@@ -14,7 +14,7 @@ region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_gc17x"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gc17x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbped"]
 atlas = ExtResource("2_qtu10")
 region = Rect2(192, 64, 48, 16)
 
@@ -127,9 +127,9 @@ texture_filter = 1
 layout_mode = 0
 offset_left = 683.0
 offset_top = 395.0
-offset_right = 807.0
-offset_bottom = 460.0
-texture_normal = SubResource("AtlasTexture_gc17x")
+offset_right = 814.28577
+offset_bottom = 464.28574
+texture_normal = SubResource("AtlasTexture_kbped")
 texture_pressed = SubResource("AtlasTexture_bto3x")
 texture_hover = SubResource("AtlasTexture_j1yus")
 stretch_mode = 0

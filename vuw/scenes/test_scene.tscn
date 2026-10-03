@@ -29,6 +29,6 @@ texture = SubResource("AtlasTexture_wtsjf")
 [node name="Timer" type="Timer" parent="enemy" unique_id=986961463]
 
 [node name="player" parent="." unique_id=551150314 instance=ExtResource("3_nd71p")]
-position = Vector2(98, -23)
+position = Vector2(93, -16)
 
 [connection signal="timeout" from="enemy/Timer" to="enemy" method="_on_timer_timeout"]
