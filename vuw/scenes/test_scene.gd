@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
-	pass # Replace with function body.
+	$player.position.x=(Global.number*1000)+250
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
