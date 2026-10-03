@@ -12,10 +12,13 @@ var direction: Vector2 = Vector2.ZERO
 # objects
 @onready var timer: Timer = $Timer
 @onready var jump_timer: Timer = $"jump timer"
+@onready var sprite: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 const BULLET = preload("uid://ciua73xce7h8j")
 
 func _ready() -> void:
+	print(stats.colour)
+	sprite.modulate = stats.colour
 	jump_timer.start(stats.jump_rate)
 	timer.start(stats.fire_rate)
 

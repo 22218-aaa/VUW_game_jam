@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3o3bx650ehm1" path="res://scripts/enemy.gd" id="3_7ddre"]
 [ext_resource type="PackedScene" uid="uid://bdp0e6vw64a66" path="res://scenes/player.tscn" id="3_nd71p"]
+[ext_resource type="Resource" uid="uid://bit7b6f8rf0xg" path="res://resources/enemies/enemies/bug.tres" id="4_3qnke"]
 [ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://assets/Background.png" id="4_7ddre"]
 [ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="4_qjeyg"]
 
@@ -2234,6 +2235,7 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 position = Vector2(352, 328)
 collision_layer = 4
 script = ExtResource("3_7ddre")
+stats = ExtResource("4_3qnke")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=457779643]
@@ -2253,7 +2255,6 @@ libraries/ = SubResource("AnimationLibrary_3qnke")
 
 [node name="player" parent="." unique_id=551150314 instance=ExtResource("3_nd71p")]
 position = Vector2(224, 320)
-collision_layer = 2
 
 [connection signal="timeout" from="enemy/Timer" to="enemy" method="_on_timer_timeout"]
 [connection signal="timeout" from="enemy/jump timer" to="enemy" method="_on_jump_timer_timeout"]

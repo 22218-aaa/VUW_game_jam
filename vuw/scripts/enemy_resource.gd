@@ -2,11 +2,12 @@ extends Resource
 class_name enemy_resource
 
 @export_category("enemy")
-@export var accelleration = 0 #1500.0
+@export var accelleration = 1200.0
 @export var friction = 20.0
 @export var jump_velocity = -200.0
 @export var jump_rate = 0.1
 @export var health = 10.0
+@export var colour: Color = Color(1, 1, 1, 1)
 
 @export_category("bullet")
 @export var damage = 2.0
