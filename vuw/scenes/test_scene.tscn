@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ca0eou25bqpl2"]
 
-[ext_resource type="Script" uid="uid://3o3bx650ehm1" path="res://enemy.gd" id="3_7ddre"]
-[ext_resource type="PackedScene" uid="uid://c4re7sh01nhqh" path="res://player.tscn" id="3_nd71p"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="4_qjeyg"]
+[ext_resource type="Script" uid="uid://3o3bx650ehm1" path="res://scripts/enemy.gd" id="3_7ddre"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="3_nd71p"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="4_qjeyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qnke"]
 size = Vector2(16, 16)

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://btr6qct6qe6bc"]
 
-[ext_resource type="Script" uid="uid://cp0futxjfjygc" path="res://mainmenu.gd" id="1_ee4bf"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="2_qtu10"]
-[ext_resource type="Texture2D" uid="uid://cdopypwiljjxq" path="res://Screenshot 2026-10-03 114000.png" id="3_kbped"]
+[ext_resource type="Script" uid="uid://cp0futxjfjygc" path="res://scripts/mainmenu.gd" id="1_ee4bf"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="2_qtu10"]
+[ext_resource type="Texture2D" uid="uid://cdopypwiljjxq" path="res://assets/Screenshot 2026-10-03 114000.png" id="3_kbped"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qjeyg"]
 atlas = ExtResource("2_qtu10")
