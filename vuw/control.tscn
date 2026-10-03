@@ -1,11 +1,42 @@
 [gd_scene format=3 uid="uid://btr6qct6qe6bc"]
 
-[ext_resource type="Texture2D" uid="uid://uglyu3408afa" path="res://pixil-frame-0.png" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://cp0futxjfjygc" path="res://mainmenu.gd" id="1_ee4bf"]
+[ext_resource type="Texture2D" uid="uid://c0g27capaupvp" path="res://Assets/VUW_game_jam_basics.png" id="2_qtu10"]
 [ext_resource type="Texture2D" uid="uid://cdopypwiljjxq" path="res://Screenshot 2026-10-03 114000.png" id="3_kbped"]
-[ext_resource type="Texture2D" uid="uid://dtx4rp7rputvd" path="res://Screenshot 2026-10-03 114148.png" id="4_fj5cn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjeyg"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qnke"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_gc17x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc17x"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(192, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bto3x"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(192, 96, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1yus"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(192, 80, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m1wt"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(0, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avbvf"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(0, 96, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qelhm"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(0, 80, 48, 16)
 
 [node name="Main Menu" type="Control" unique_id=1021446545]
 process_mode = 3
@@ -27,18 +58,15 @@ offset_right = 1147.0
 offset_bottom = 58.0
 
 [node name="cuit" type="Button" parent="." unique_id=1466146853]
-layout_mode = 0
-offset_left = 1091.0
-offset_top = 2.0
-offset_right = 1142.0
-offset_bottom = 55.0
-flat = true
-
-[node name="PixilFrame0" type="Sprite2D" parent="." unique_id=617767494]
 texture_filter = 1
-position = Vector2(1131.5, 65)
-scale = Vector2(2.1700003, 2.3425)
-texture = ExtResource("1_0fbet")
+layout_mode = 0
+offset_left = 1088.0
+offset_top = -3.0
+offset_right = 1148.0
+offset_bottom = 60.0
+icon = SubResource("AtlasTexture_qjeyg")
+flat = true
+expand_icon = true
 
 [node name="Pause" type="Button" parent="." unique_id=1280459817]
 layout_mode = 0
@@ -55,9 +83,10 @@ scale = Vector2(0.13707708, 0.12921688)
 texture = ExtResource("3_kbped")
 
 [node name="resume" type="Sprite2D" parent="." unique_id=315492181]
-position = Vector2(1057.5, 28.124983)
-scale = Vector2(0.115853705, 0.10814895)
-texture = ExtResource("4_fj5cn")
+texture_filter = 1
+position = Vector2(1057.9999, 28)
+scale = Vector2(3.5000017, 3.5000005)
+texture = SubResource("AtlasTexture_3qnke")
 
 [node name="MenuButton" type="MenuButton" parent="." unique_id=2014950697]
 layout_mode = 0
@@ -94,21 +123,29 @@ offset_right = 681.0
 offset_bottom = 343.0
 theme_override_font_sizes/font_size = 14
 
-[node name="Quit" type="Button" parent="Control" unique_id=402061679]
+[node name="Quit" type="TextureButton" parent="Control" unique_id=567494556]
+texture_filter = 1
 layout_mode = 0
-offset_left = 693.0
-offset_top = 419.0
-offset_right = 788.0
-offset_bottom = 465.0
-text = "Quit"
-
-[node name="Cancel" type="Button" parent="Control" unique_id=49947873]
-layout_mode = 0
-offset_left = 312.0
-offset_top = 406.0
-offset_right = 421.0
+offset_left = 683.0
+offset_top = 395.0
+offset_right = 807.0
 offset_bottom = 460.0
-text = "Cancel"
+texture_normal = SubResource("AtlasTexture_gc17x")
+texture_pressed = SubResource("AtlasTexture_bto3x")
+texture_hover = SubResource("AtlasTexture_j1yus")
+stretch_mode = 0
+
+[node name="Cancel" type="TextureButton" parent="Control" unique_id=141064927]
+texture_filter = 1
+layout_mode = 0
+offset_left = 324.0
+offset_top = 393.0
+offset_right = 451.0
+offset_bottom = 461.0
+texture_normal = SubResource("AtlasTexture_7m1wt")
+texture_pressed = SubResource("AtlasTexture_avbvf")
+texture_hover = SubResource("AtlasTexture_qelhm")
+stretch_mode = 0
 
 [node name="Timer" type="Timer" parent="Control" unique_id=779664848]
 wait_time = 60.0

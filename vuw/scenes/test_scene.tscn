@@ -2191,7 +2191,6 @@ position = Vector2(22, -17)
 script = ExtResource("3_nd71p")
 
 [node name="Main Menu2" parent="." unique_id=1021446545 instance=ExtResource("3_7ddre")]
-visible = false
 offset_left = -552.0
 offset_top = -339.0
 offset_right = -552.0
