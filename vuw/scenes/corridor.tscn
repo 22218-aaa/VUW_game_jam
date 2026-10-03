@@ -3,10 +3,9 @@
 [ext_resource type="Script" uid="uid://dav028qf51fj8" path="res://scripts/corridor.gd" id="1_n8bhm"]
 [ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="1_pucmg"]
 [ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://Assets/Background.png" id="2_mus4g"]
-[ext_resource type="PackedScene" uid="uid://tb4fsvifmha1" path="res://scenes/corridor_player.tscn" id="3_7w20u"]
 [ext_resource type="PackedScene" uid="uid://cruavc4av24g1" path="res://scenes/node_2d.tscn" id="4_mus4g"]
+[ext_resource type="PackedScene" uid="uid://bdp0e6vw64a66" path="res://scenes/player.tscn" id="6_n8bhm"]
 [ext_resource type="PackedScene" uid="uid://crsgvfy1r1fhe" path="res://scenes/shop.tscn" id="6_pblcb"]
-[ext_resource type="PackedScene" uid="uid://btr6qct6qe6bc" path="res://scenes/control.tscn" id="7_pblcb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8bhm"]
 texture = ExtResource("1_pucmg")
@@ -2190,20 +2189,5 @@ scale = Vector2(0.2, 0.2)
 [node name="Shop" parent="." unique_id=1733443330 instance=ExtResource("6_pblcb")]
 position = Vector2(295, 110)
 
-[node name="Corridor Player" parent="." unique_id=1066082994 instance=ExtResource("3_7w20u")]
-position = Vector2(89, 327)
-
-[node name="Camera2D" type="Camera2D" parent="Corridor Player" unique_id=108661767]
-limit_left = 46
-limit_top = -10000017
-limit_right = 2226
-limit_bottom = 346
-position_smoothing_enabled = true
-
-[node name="Main Menu" parent="Corridor Player/Camera2D" unique_id=1021446545 instance=ExtResource("7_pblcb")]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -39.000004
-offset_top = -343.0
-offset_right = -39.000004
-offset_bottom = -343.0
+[node name="player" parent="." unique_id=551150314 instance=ExtResource("6_n8bhm")]
+position = Vector2(83, 315)
