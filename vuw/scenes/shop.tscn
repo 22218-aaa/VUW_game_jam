@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://crsgvfy1r1fhe"]
 
 [ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="1_lx5au"]
-[ext_resource type="Script" uid="uid://bustfh61idhyu" path="res://scenes/shop.gd" id="1_xfvoa"]
+[ext_resource type="Script" uid="uid://bustfh61idhyu" path="res://scripts/shop.gd" id="1_xfvoa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfvoa"]
 texture = ExtResource("1_lx5au")

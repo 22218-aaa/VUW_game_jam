@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://bdp0e6vw64a66"]
 
 [ext_resource type="Script" uid="uid://dl78wotmu7b7f" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dak7evsin0qi1" path="res://assets/icon.svg" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ddre"]
 size = Vector2(32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qowwa"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 0, 16, 16)
+
 [node name="player" type="CharacterBody2D" unique_id=551150314 groups=["player"]]
-position = Vector2(0, -16)
 collision_layer = 2
 script = ExtResource("1_g2els")
 metadata/_edit_group_ = true
@@ -16,9 +19,10 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_7ddre")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2010365791]
-position = Vector2(-5.438924e-07, -4.246831e-07)
-scale = Vector2(0.24999999, 0.2556591)
-texture = ExtResource("2_i3pqv")
+texture_filter = 1
+position = Vector2(0, -2.3841858e-07)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_qowwa")
 
 [node name="reload_timer" type="Timer" parent="." unique_id=630666183]
 
