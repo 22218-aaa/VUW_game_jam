@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ca0eou25bqpl2"]
 
+[ext_resource type="Script" uid="uid://3o3bx650ehm1" path="res://scripts/enemy.gd" id="3_7ddre"]
 [ext_resource type="PackedScene" uid="uid://bdp0e6vw64a66" path="res://scenes/player.tscn" id="3_nd71p"]
-[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://Assets/Background.png" id="4_7ddre"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="4_qjeyg"]
+[ext_resource type="Resource" uid="uid://bit7b6f8rf0xg" path="res://resources/enemies/enemies/bug.tres" id="4_3qnke"]
+[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://assets/Background.png" id="4_7ddre"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="4_qjeyg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qjeyg"]
 texture = ExtResource("4_7ddre")
@@ -2178,6 +2180,44 @@ size = Vector2(16, 16)
 atlas = ExtResource("4_qjeyg")
 region = Rect2(16, 0, 16, 16)
 
+[sub_resource type="Animation" id="Animation_7ddre"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qjeyg"]
+resource_name = "hurt"
+length = 0.05
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3qnke"]
+_data = {
+&"RESET": SubResource("Animation_7ddre"),
+&"hurt": SubResource("Animation_qjeyg")
+}
+
 [node name="Node2D" type="Node2D" unique_id=478470449]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=819493119]
@@ -2192,8 +2232,10 @@ format = 2
 layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 1310719, 393216, 0, 1245183, 393216, 0, 1179647, 393216, 0, 1114111, 393216, 0, 1048575, 393216, 0, 983039, 393216, 0, 917503, 393216, 0, 851967, 393216, 0, 786431, 393216, 0, 720895, 393216, 0, 655359, 393216, 0, 589823, 393216, 0, 524287, 393216, 0, 458751, 393216, 0, 393215, 393216, 0, 327679, 393216, 0, 262143, 393216, 0, 196607, 393216, 0, 131071, 393216, 0, 65535, 393216, 0, 0, 393216, 0, 1, 393216, 0, 2, 393216, 0, 3, 393216, 0, 4, 393216, 0, 5, 393216, 0, 6, 393216, 0, 7, 393216, 0, 8, 393216, 0, 9, 393216, 0, 10, 393216, 0, 11, 393216, 0, 12, 393216, 0, 13, 393216, 0, 14, 393216, 0, 15, 393216, 0, 16, 393216, 0, 17, 393216, 0, 18, 393216, 0, 19, 393216, 0, 20, 393216, 0, 21, 393216, 0, 22, 393216, 0, 23, 393216, 0, 24, 393216, 0, 25, 393216, 0, 26, 393216, 0, 27, 393216, 0, 28, 393216, 0, 65564, 393216, 0, 131100, 393216, 0, 196636, 393216, 0, 262172, 393216, 0, 327708, 393216, 0, 393244, 393216, 0, 458780, 393216, 0, 524316, 393216, 0, 589852, 393216, 0, 655388, 393216, 0, 720924, 393216, 0, 786460, 393216, 0, 851996, 393216, 0, 917532, 393216, 0, 983068, 393216, 0, 1048604, 393216, 0, 1114140, 393216, 0, 1179676, 393216, 0, 1245212, 393216, 0, 1310748, 393216, 0, 1376284, 393216, 0, 1441820, 393216, 0, 1441819, 393216, 0, 1441818, 393216, 0, 1441817, 393216, 0, 1441816, 393216, 0, 1441815, 393216, 0, 1441814, 393216, 0, 1441813, 393216, 0, 1441812, 393216, 0, 1441811, 393216, 0, 1441810, 393216, 0, 1441809, 393216, 0, 1441808, 393216, 0, 1441807, 393216, 0, 1441806, 393216, 0, 1441805, 393216, 0, 1441804, 393216, 0, 1441803, 393216, 0, 1441802, 393216, 0, 1441801, 393216, 0, 1441800, 393216, 0, 1441799, 393216, 0, 1441798, 393216, 0, 1441797, 393216, 0, 1441796, 393216, 0, 1441795, 393216, 0, 1441794, 393216, 0, 1441793, 393216, 0, 1441792, 393216, 0, 1507327, 393216, 0, 1376256, 655360, 0, 1376257, 655360, 0, 1376258, 655360, 0, 1376259, 655360, 0, 1376260, 655360, 0, 1376261, 655360, 0, 1376262, 655360, 0, 1376263, 655360, 0, 1376264, 655360, 0, 1376265, 655360, 0, 1376266, 655360, 0, 1376267, 655360, 0, 1376268, 655360, 0, 1376269, 655360, 0, 1376270, 655360, 0, 1376271, 655360, 0, 1376272, 655360, 0, 1376273, 655360, 0, 1376274, 655360, 0, 1376275, 655360, 0, 1376276, 655360, 0, 1376277, 655360, 0, 1376278, 655360, 0, 1376279, 655360, 0, 1376280, 655360, 0, 1376281, 655360, 0, 1376282, 655360, 0, 1376283, 655360, 0)
 
 [node name="enemy" type="CharacterBody2D" parent="." unique_id=277306273]
-position = Vector2(343, 239)
+position = Vector2(352, 328)
 collision_layer = 4
+script = ExtResource("3_7ddre")
+stats = ExtResource("4_3qnke")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=457779643]
@@ -2204,8 +2246,15 @@ texture_filter = 1
 texture = SubResource("AtlasTexture_wtsjf")
 
 [node name="Timer" type="Timer" parent="enemy" unique_id=986961463]
+one_shot = true
+
+[node name="jump timer" type="Timer" parent="enemy" unique_id=18950796]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemy" unique_id=2147279595]
+libraries/ = SubResource("AnimationLibrary_3qnke")
 
 [node name="player" parent="." unique_id=551150314 instance=ExtResource("3_nd71p")]
-position = Vector2(228, 271)
+position = Vector2(224, 320)
 
 [connection signal="timeout" from="enemy/Timer" to="enemy" method="_on_timer_timeout"]
+[connection signal="timeout" from="enemy/jump timer" to="enemy" method="_on_jump_timer_timeout"]
