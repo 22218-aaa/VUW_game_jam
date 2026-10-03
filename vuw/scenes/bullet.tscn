@@ -12,7 +12,6 @@ region = Rect2(150, 54, 4, 4)
 
 [node name="enemy_bullet" type="Area2D" unique_id=1736280005]
 collision_layer = 0
-collision_mask = 0
 script = ExtResource("1_y25gk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1479581778]

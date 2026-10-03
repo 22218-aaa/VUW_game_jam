@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://3o3bx650ehm1" path="res://scripts/enemy.gd" id="1_4ra3w"]
 [ext_resource type="Resource" uid="uid://bit7b6f8rf0xg" path="res://resources/enemies/enemies/bug.tres" id="2_5uy6h"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="3_c4w8v"]
+[ext_resource type="Texture2D" uid="uid://s4kbxuq7sa0q" path="res://assets/VUW_jam_new_sprites.png" id="3_4ra3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qnke"]
-size = Vector2(16, 16)
+size = Vector2(32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wtsjf"]
-atlas = ExtResource("3_c4w8v")
-region = Rect2(16, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
+atlas = ExtResource("3_4ra3w")
+region = Rect2(0, 16, 32, 32)
 
 [sub_resource type="Animation" id="Animation_7ddre"]
 length = 0.001
@@ -60,7 +60,7 @@ shape = SubResource("RectangleShape2D_3qnke")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=198268400]
 texture_filter = 1
-texture = SubResource("AtlasTexture_wtsjf")
+texture = SubResource("AtlasTexture_g2els")
 
 [node name="Timer" type="Timer" parent="." unique_id=921598066]
 one_shot = true

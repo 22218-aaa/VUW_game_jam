@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://csncamslw05d7" path="res://scenes/test_scene.gd" id="1_7ddre"]
 [ext_resource type="PackedScene" uid="uid://bdp0e6vw64a66" path="res://scenes/player.tscn" id="3_nd71p"]
-[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://Assets/Background.png" id="4_7ddre"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="4_qjeyg"]
+[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://assets/Background.png" id="4_7ddre"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="4_qjeyg"]
+[ext_resource type="PackedScene" uid="uid://cdcs6wqrrjmco" path="res://scenes/enemy.tscn" id="5_qjeyg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qjeyg"]
 texture = ExtResource("4_7ddre")
@@ -2389,3 +2390,6 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="player" parent="Node2D12" unique_id=1968136294 instance=ExtResource("3_nd71p")]
 position = Vector2(224, 320)
+
+[node name="enemy" parent="Node2D12" unique_id=1463968285 instance=ExtResource("5_qjeyg")]
+position = Vector2(344, 320)
