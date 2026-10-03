@@ -7,3 +7,7 @@ extends Node
 @export var fire_rate: float  = 0.1
 
 @export var max_jumps: int = 2
+
+func _process(delta: float) -> void:
+	if energy<=0:
+		get_tree().reload_current_scene()
