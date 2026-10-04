@@ -2,28 +2,11 @@
 
 [ext_resource type="Script" uid="uid://csncamslw05d7" path="res://scenes/test_scene.gd" id="1_7ddre"]
 [ext_resource type="PackedScene" uid="uid://bdp0e6vw64a66" path="res://scenes/player.tscn" id="3_nd71p"]
-[ext_resource type="Script" uid="uid://c37u4phbcd2ta" path="res://scripts/enemy_resource.gd" id="3_wtsjf"]
 [ext_resource type="PackedScene" uid="uid://cdcs6wqrrjmco" path="res://scenes/enemy.tscn" id="4_3qnke"]
 [ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://Assets/Background.png" id="4_7ddre"]
 [ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="4_qjeyg"]
 [ext_resource type="Script" uid="uid://b52p7jqetiivb" path="res://scenes/area_2d.gd" id="6_3qnke"]
 [ext_resource type="PackedScene" uid="uid://btr6qct6qe6bc" path="res://scenes/control.tscn" id="7_wtsjf"]
-
-[sub_resource type="Resource" id="Resource_rnaij"]
-script = ExtResource("3_wtsjf")
-accelleration = 0.0
-jump_rate = 0.001
-health = 100.0
-colour = Color(1, 0, 0, 1)
-metadata/_custom_type_script = "uid://c37u4phbcd2ta"
-
-[sub_resource type="Resource" id="Resource_h3xc6"]
-script = ExtResource("3_wtsjf")
-accelleration = 0.0
-jump_rate = 0.001
-health = 100.0
-colour = Color(1, 0, 0, 1)
-metadata/_custom_type_script = "uid://c37u4phbcd2ta"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qjeyg"]
 texture = ExtResource("4_7ddre")
@@ -2202,17 +2185,18 @@ script = ExtResource("1_7ddre")
 
 [node name="enemy" parent="Node2D1" unique_id=1463968285 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(354, 318)
 
 [node name="enemy2" parent="Node2D1" unique_id=1466320300 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(111, 207)
-stats = SubResource("Resource_rnaij")
 
 [node name="enemy3" parent="Node2D1" unique_id=8425645 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(400, 239)
-stats = SubResource("Resource_h3xc6")
 
 [node name="TileMap" type="TileMap" parent="Node2D1" unique_id=819493119]
 position = Vector2(0, 16)
@@ -2243,14 +2227,17 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy5" parent="Node2D2" unique_id=367658332 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(95, 271)
 
 [node name="enemy4" parent="Node2D2" unique_id=1968123303 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(366, 317)
 
 [node name="enemy6" parent="Node2D2" unique_id=267030970 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(128.04541, 144.67947)
 
 [node name="Node2D3" type="Node2D" parent="." unique_id=694874280]
@@ -2270,14 +2257,17 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy6" parent="Node2D3" unique_id=1975900130 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(34.3656, 318.53268)
 
 [node name="enemy20" parent="Node2D3" unique_id=1176728864 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(131, 95)
 
 [node name="enemy19" parent="Node2D3" unique_id=166779124 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(337, 144)
 
 [node name="Node2D4" type="Node2D" parent="." unique_id=1776187268]
@@ -2297,18 +2287,22 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy17" parent="Node2D4" unique_id=970527522 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(401, 255)
 
 [node name="enemy18" parent="Node2D4" unique_id=1741430327 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(129, 95)
 
 [node name="enemy21" parent="Node2D4" unique_id=383793857 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(402, 140)
 
 [node name="enemy22" parent="Node2D4" unique_id=579808214 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(35, 319)
 
 [node name="Node2D5" type="Node2D" parent="." unique_id=1129460715]
@@ -2328,18 +2322,22 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy13" parent="Node2D5" unique_id=1774027735 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(387, 191)
 
 [node name="enemy14" parent="Node2D5" unique_id=1820771123 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(33, 271)
 
 [node name="enemy15" parent="Node2D5" unique_id=2021033690 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(144, 207)
 
 [node name="enemy16" parent="Node2D5" unique_id=1568521042 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(416, 79)
 
 [node name="Node2D6" type="Node2D" parent="." unique_id=1444628487]
@@ -2359,14 +2357,17 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy10" parent="Node2D6" unique_id=2109034005 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(193, 134)
 
 [node name="enemy11" parent="Node2D6" unique_id=746079232 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(98, 63)
 
 [node name="enemy12" parent="Node2D6" unique_id=84457856 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(431, 207)
 
 [node name="Node2D7" type="Node2D" parent="." unique_id=1290034879]
@@ -2374,10 +2375,12 @@ position = Vector2(6000, 0)
 
 [node name="enemy8" parent="Node2D7" unique_id=1777922648 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(304, 111)
 
 [node name="enemy9" parent="Node2D7" unique_id=1300175896 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(146, 127)
 
 [node name="TileMap" type="TileMap" parent="Node2D7" unique_id=574800025]
@@ -2394,6 +2397,7 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy7" parent="Node2D7" unique_id=370814114 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(113, 239)
 
 [node name="Node2D8" type="Node2D" parent="." unique_id=888676441]
@@ -2413,14 +2417,17 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy29" parent="Node2D8" unique_id=1085604717 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(176, 224)
 
 [node name="enemy30" parent="Node2D8" unique_id=8950778 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(337, 129)
 
 [node name="enemy31" parent="Node2D8" unique_id=1413789970 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(140, 63)
 
 [node name="Node2D9" type="Node2D" parent="." unique_id=1939270674]
@@ -2428,18 +2435,22 @@ position = Vector2(8000, 0)
 
 [node name="enemy25" parent="Node2D9" unique_id=1703684249 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(417, 31)
 
 [node name="enemy26" parent="Node2D9" unique_id=392844240 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(401, 192)
 
 [node name="enemy27" parent="Node2D9" unique_id=1691842356 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(145, 110)
 
 [node name="enemy28" parent="Node2D9" unique_id=1458731512 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(97, 238)
 
 [node name="TileMap" type="TileMap" parent="Node2D9" unique_id=309217829]
@@ -2459,10 +2470,12 @@ position = Vector2(9000, 0)
 
 [node name="enemy32" parent="Node2D10" unique_id=916725239 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(304, 63)
 
 [node name="enemy23" parent="Node2D10" unique_id=584018333 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(388, 238)
 
 [node name="TileMap" type="TileMap" parent="Node2D10" unique_id=1126626792]
@@ -2479,18 +2492,22 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy33" parent="Node2D10" unique_id=117528835 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(177, 143)
 
 [node name="enemy34" parent="Node2D10" unique_id=851031101 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(55, 207)
 
 [node name="enemy35" parent="Node2D10" unique_id=1845588168 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(111, 207)
 
 [node name="enemy24" parent="Node2D10" unique_id=500505930 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(224, 127)
 
 [node name="Node2D11" type="Node2D" parent="." unique_id=386714577]
@@ -2510,18 +2527,22 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy36" parent="Node2D11" unique_id=1271127293 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(271, 79)
 
 [node name="enemy37" parent="Node2D11" unique_id=1543295227 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(436, 62)
 
 [node name="enemy38" parent="Node2D11" unique_id=326656232 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(369, 190)
 
 [node name="enemy40" parent="Node2D11" unique_id=1349523088 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(88, 78)
 
 [node name="Node2D12" type="Node2D" parent="." unique_id=607826384]
@@ -2541,18 +2562,22 @@ layer_0/tile_data = PackedInt32Array(1441791, 393216, 0, 1376255, 393216, 0, 131
 
 [node name="enemy39" parent="Node2D12" unique_id=958465182 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(446, 316)
 
 [node name="enemy41" parent="Node2D12" unique_id=889447121 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(36, 319)
 
 [node name="enemy42" parent="Node2D12" unique_id=1418162029 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(307, 62)
 
 [node name="enemy43" parent="Node2D12" unique_id=174252971 instance=ExtResource("4_3qnke")]
 z_index = 1
+texture_filter = 0
 position = Vector2(165, 60)
 
 [node name="player" parent="." unique_id=551150314 instance=ExtResource("3_nd71p")]
