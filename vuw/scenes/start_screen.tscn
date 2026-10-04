@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dxb70ptkv1unf"]
 
 [ext_resource type="Script" uid="uid://js6lhenbq44e" path="res://scripts/start_screen.gd" id="1_afy8x"]
-[ext_resource type="Texture2D" uid="uid://c0vgmqokksou" path="res://assets/Screenshot 2026-10-03 111632.png" id="1_ncxyx"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="2_pevhg"]
+[ext_resource type="Texture2D" uid="uid://c0vgmqokksou" path="res://Assets/Screenshot 2026-10-03 111632.png" id="1_ncxyx"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="2_pevhg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rnaij"]
 atlas = ExtResource("2_pevhg")
@@ -38,5 +38,14 @@ stretch_mode = 0
 [node name="Camera2D" type="Camera2D" parent="." unique_id=842865842]
 position = Vector2(1431, 818)
 zoom = Vector2(0.405, 0.4)
+
+[node name="Label" type="Label" parent="." unique_id=757929336]
+offset_left = 1048.0
+offset_top = 617.0
+offset_right = 1835.0
+offset_bottom = 889.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Aranta: War between the Worlds"
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

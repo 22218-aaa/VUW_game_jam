@@ -2192,7 +2192,3 @@ position = Vector2(295, 110)
 [node name="player" parent="." unique_id=551150314 instance=ExtResource("6_n8bhm")]
 position = Vector2(83, 315)
 metadata/_edit_group_ = true
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=310403590]
-position = Vector2(1129, 164)
-zoom = Vector2(0.219, 0.9)
