@@ -1,3 +1,59 @@
 [gd_scene format=3 uid="uid://de6yg0ih6ifmo"]
 
-[node name="Interactive Character" type="Area2D" unique_id=2029545811]
+[ext_resource type="Script" uid="uid://dt0ykg8py5mvr" path="res://scenes/interactive_character.gd" id="1_sa741"]
+[ext_resource type="Texture2D" uid="uid://bukavwro2oodn" path="res://Screenshot 2026-10-04 132243.png" id="1_wkltf"]
+[ext_resource type="Texture2D" uid="uid://s4kbxuq7sa0q" path="res://Assets/VUW_jam_new_sprites.png" id="2_sa741"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc17x"]
+atlas = ExtResource("2_sa741")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bto3x"]
+atlas = ExtResource("2_sa741")
+region = Rect2(16, 0, 16, 16)
+
+[node name="Node2D" type="Node2D" unique_id=1027420910]
+script = ExtResource("1_sa741")
+
+[node name="Dark Forest" type="Sprite2D" parent="." unique_id=1818802851]
+position = Vector2(248, 178.49998)
+scale = Vector2(0.15266706, 0.19791666)
+texture = ExtResource("1_wkltf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=778913621]
+texture_filter = 1
+position = Vector2(275, 252)
+scale = Vector2(2.625, 3.0625)
+texture = SubResource("AtlasTexture_gc17x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=671006344]
+texture_filter = 1
+position = Vector2(303.00003, 251)
+scale = Vector2(2.9687495, 3.25)
+texture = SubResource("AtlasTexture_bto3x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=569048205]
+offset_left = 147.0
+offset_top = 284.0
+offset_right = 418.0
+offset_bottom = 331.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2001261782]
+offset_left = 149.0
+offset_top = 285.0
+offset_right = 417.0
+offset_bottom = 326.0
+theme_override_font_sizes/font_size = 6
+text = "Commander: Hello Agent, you have been tasked with an important infiltration job."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=1637944379]
+offset_left = 235.0
+offset_top = 334.0
+offset_right = 311.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 13
+text = "Continue"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
