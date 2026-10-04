@@ -98,7 +98,6 @@ func damaged(bullet_damage):
 	stats.health -= bullet_damage
 	animation_player.play("hurt")
 	if stats.health <= 0.0:
-		death()
 		queue_free()
 
 
