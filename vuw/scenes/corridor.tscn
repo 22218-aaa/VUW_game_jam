@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dldh3rb51kdcy"]
 
 [ext_resource type="Script" uid="uid://dav028qf51fj8" path="res://scripts/corridor.gd" id="1_n8bhm"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="1_pucmg"]
-[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://assets/Background.png" id="2_mus4g"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="1_pucmg"]
+[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://Assets/Background.png" id="2_mus4g"]
 [ext_resource type="PackedScene" uid="uid://bdp0e6vw64a66" path="res://scenes/player.tscn" id="6_n8bhm"]
 [ext_resource type="PackedScene" uid="uid://crsgvfy1r1fhe" path="res://scenes/shop.tscn" id="6_pblcb"]
 [ext_resource type="Script" uid="uid://ccggcs364ok4a" path="res://scripts/corridor_camera.gd" id="7_pblcb"]
@@ -2191,3 +2191,6 @@ position = Vector2(272, 184)
 script = ExtResource("7_pblcb")
 min_x = 272
 max_x = 1992
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1119923080]
+position = Vector2(2223, 302)

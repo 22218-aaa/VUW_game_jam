@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d0d7givnx4q4n"]
 
+[ext_resource type="Script" uid="uid://dyob0csia6m5x" path="res://tutorial.gd" id="1_5mrt3"]
 [ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://Assets/Background.png" id="1_ehuit"]
 [ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="2_5mrt3"]
 [ext_resource type="PackedScene" uid="uid://bdp0e6vw64a66" path="res://scenes/player.tscn" id="3_rwowx"]
@@ -2178,6 +2179,7 @@ texture = ExtResource("1_ehuit")
 sources/0 = SubResource("TileSetAtlasSource_5mrt3")
 
 [node name="Tutorial" type="Node2D" unique_id=1737034835]
+script = ExtResource("1_5mrt3")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=343019137]
 tile_set = SubResource("TileSet_j1yus")
@@ -2243,3 +2245,12 @@ offset_bottom = 122.0
 text = "Kill  Enemies 
 for 
 Batteries"
+
+[node name="Button" type="Button" parent="." unique_id=301274751]
+offset_left = 1128.0
+offset_top = 141.0
+offset_right = 1240.0
+offset_bottom = 211.0
+text = "Go to Battle"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

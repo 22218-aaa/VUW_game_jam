@@ -11,6 +11,9 @@ func _ready() -> void:
 		$Shop.visible=false
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if $player.position.x>2222:
+		Global.man+=1
+		get_tree().change_scene_to_file("res://scenes/test_scene.tscn")
