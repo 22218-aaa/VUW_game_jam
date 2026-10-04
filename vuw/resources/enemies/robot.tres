@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="enemy_resource" format=3 uid="uid://bgwidehwfnbis"]
+
+[ext_resource type="Script" uid="uid://c37u4phbcd2ta" path="res://resources/enemy_resource.gd" id="1_qegkg"]
+
+[resource]
+script = ExtResource("1_qegkg")
+enemy_name = "robot"
+accelleration = 150.0
+jump_velocity = -350.0
+health = 100.0
+damage = 0.5
+fire_rate = 0.5
+metadata/_custom_type_script = "uid://c37u4phbcd2ta"
