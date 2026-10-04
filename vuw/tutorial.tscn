@@ -2196,8 +2196,16 @@ min_x = 208
 max_x = 1264
 metadata/_edit_group_ = true
 
+<<<<<<< HEAD
 [node name="Main Menu" parent="Camera2D" unique_id=1021446545 instance=ExtResource("4_5mrt3")]
 offset_left = -240.00002
 offset_top = -180.0
 offset_right = -240.00002
 offset_bottom = -180.0
+=======
+[node name="Main Menu" parent="player/Camera2D" unique_id=1021446545 instance=ExtResource("4_5mrt3")]
+offset_left = 29.999989
+offset_top = -209.00003
+offset_right = 29.999989
+offset_bottom = -209.00003
+>>>>>>> bf6398afea33280e5f855a49af17f064855f4d8a
