@@ -80,12 +80,4 @@ wait_time = 30.0
 one_shot = true
 autostart = true
 
-[node name="Button" type="Button" parent="." unique_id=390042034]
-offset_left = -54.0
-offset_top = 129.0
-offset_right = 55.0
-offset_bottom = 154.0
-text = "Restart"
-
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
