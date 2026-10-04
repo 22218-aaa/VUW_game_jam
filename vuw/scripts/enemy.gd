@@ -1,3 +1,5 @@
+@tool
+
 extends CharacterBody2D
 
 
@@ -12,11 +14,31 @@ var direction: Vector2 = Vector2.ZERO
 # objects
 @onready var timer: Timer = $Timer
 @onready var jump_timer: Timer = $"jump timer"
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 const BULLET = preload("uid://ciua73xce7h8j")
 
+@onready var bug: Sprite2D = $bug
+@onready var tank: Sprite2D = $tank
+@onready var slime: Sprite2D = $slime
+@onready var robot: Sprite2D = $robot
+
+
+
 func _ready() -> void:
+	bug.visible = false
+	tank.visible = false
+	slime.visible = false
+	robot.visible = false
+	
+	if stats.enemy_name == "bug": sprite = bug
+	if stats.enemy_name == "tank": sprite = tank
+	if stats.enemy_name == "slime": sprite = slime
+	if stats.enemy_name == "robot": sprite = robot
+	
+	sprite.visible = true # error means name is wrong
+	
+	
 	print(stats.colour)
 	sprite.modulate = stats.colour
 	jump_timer.start(stats.jump_rate)
@@ -24,6 +46,19 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		bug.visible = false
+		tank.visible = false
+		slime.visible = false
+		robot.visible = false
+		
+		if stats.enemy_name == "bug": sprite = bug
+		if stats.enemy_name == "tank": sprite = tank
+		if stats.enemy_name == "slime": sprite = slime
+		if stats.enemy_name == "robot": sprite = robot
+		
+		sprite.visible = true
+		return
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -54,6 +89,7 @@ func fire():
 	inst.position = position
 	inst.look_at(player.position)
 	inst.set_collision_mask_value(2, true)
+	inst.sprite.modulate = Color(1.0, 0.0, 0.0, 1.0)
 	loaded = false
 	timer.start(stats.fire_rate)
 
@@ -67,6 +103,8 @@ func damaged(bullet_damage):
 
 func death():
 	get_tree().change_scene_to_file("res://scenes/corridor.tscn")
+
+
 
 
 func _on_timer_timeout() -> void:

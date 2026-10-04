@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ciua73xce7h8j"]
 
 [ext_resource type="Script" uid="uid://b7ybmmie3qmiv" path="res://scripts/bullet.gd" id="1_y25gk"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="2_l5glv"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="2_l5glv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsjf"]
 size = Vector2(4, 4)
@@ -10,7 +10,7 @@ size = Vector2(4, 4)
 atlas = ExtResource("2_l5glv")
 region = Rect2(136, 24, 8, 8)
 
-[node name="enemy_bullet" type="Area2D" unique_id=1736280005]
+[node name="bullet" type="Area2D" unique_id=1736280005]
 z_index = 1
 collision_layer = 0
 script = ExtResource("1_y25gk")

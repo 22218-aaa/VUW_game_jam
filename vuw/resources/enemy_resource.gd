@@ -1,6 +1,7 @@
 extends Resource
 class_name enemy_resource
 
+@export var enemy_name: String
 @export_category("enemy")
 @export var accelleration = 1200.0
 @export var friction = 20.0
