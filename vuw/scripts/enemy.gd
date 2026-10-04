@@ -123,7 +123,6 @@ func damaged(bullet_damage):
 
 func death():
 	Global.man-=1
-	Global.energy+=20
 
 
 

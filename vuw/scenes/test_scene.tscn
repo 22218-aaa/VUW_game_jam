@@ -2206,7 +2206,7 @@ stats = ExtResource("3_wtsjf")
 [node name="enemy3" parent="Node2D1" unique_id=8425645 instance=ExtResource("4_3qnke")]
 z_index = 1
 texture_filter = 0
-position = Vector2(400, 239)
+position = Vector2(410, 233)
 stats = ExtResource("4_u0xbq")
 
 [node name="TileMap" type="TileMap" parent="Node2D1" unique_id=819493119]
@@ -2282,7 +2282,7 @@ position = Vector2(34.3656, 318.53268)
 [node name="enemy7" parent="Node2D3" unique_id=822340267 instance=ExtResource("4_3qnke")]
 z_index = 1
 texture_filter = 0
-position = Vector2(425, 320)
+position = Vector2(423, 308)
 stats = ExtResource("9_8gixj")
 
 [node name="enemy20" parent="Node2D3" unique_id=1176728864 instance=ExtResource("4_3qnke")]
@@ -2531,7 +2531,7 @@ position = Vector2(9000, 0)
 [node name="enemy32" parent="Node2D10" unique_id=916725239 instance=ExtResource("4_3qnke")]
 z_index = 1
 texture_filter = 0
-position = Vector2(304, 63)
+position = Vector2(304, 52)
 stats = ExtResource("9_8gixj")
 
 [node name="enemy23" parent="Node2D10" unique_id=584018333 instance=ExtResource("4_3qnke")]
@@ -2597,12 +2597,6 @@ texture_filter = 0
 position = Vector2(369, 190)
 stats = ExtResource("3_wtsjf")
 
-[node name="enemy40" parent="Node2D11" unique_id=1349523088 instance=ExtResource("4_3qnke")]
-z_index = 1
-texture_filter = 0
-position = Vector2(88, 78)
-stats = ExtResource("6_h3xc6")
-
 [node name="Node2D12" type="Node2D" parent="." unique_id=607826384]
 position = Vector2(11000, 0)
 
@@ -2633,13 +2627,13 @@ stats = ExtResource("10_hf2sn")
 [node name="enemy42" parent="Node2D12" unique_id=1418162029 instance=ExtResource("4_3qnke")]
 z_index = 1
 texture_filter = 0
-position = Vector2(312, 55)
+position = Vector2(331, 276)
 stats = ExtResource("9_8gixj")
 
 [node name="enemy43" parent="Node2D12" unique_id=174252971 instance=ExtResource("4_3qnke")]
 z_index = 1
 texture_filter = 0
-position = Vector2(165, 54)
+position = Vector2(-924, 70)
 stats = ExtResource("4_u0xbq")
 
 [node name="enemy44" parent="Node2D12" unique_id=2038868931 instance=ExtResource("4_3qnke")]
@@ -2663,3 +2657,5 @@ anchor_bottom = 0.0
 offset_left = 2.0000002
 offset_right = 2.0000002
 offset_bottom = 1.4210855e-14
+grow_horizontal = 1
+grow_vertical = 1

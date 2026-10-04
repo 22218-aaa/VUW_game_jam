@@ -5,7 +5,7 @@ extends Node
 @export var damage: float  = 10.0
 @export var bullet_speed: float  = 200
 @export var fire_rate: float  = 0.1
-@export var number: int =0
+@export var number: int =10
 @export var max_jumps: int = 2
 @export var man:int=4
 
@@ -14,3 +14,5 @@ func _process(delta: float) -> void:
 		man=4
 		number+=1
 		get_tree().reload_current_scene()
+	if number>11:
+		get_tree().change_scene_to_file("res://scenes/win_scene.tscn")
