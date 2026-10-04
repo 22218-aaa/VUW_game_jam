@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="enemy_resource" format=3 uid="uid://dkdhhhbw4gr5e"]
+
+[ext_resource type="Script" uid="uid://c37u4phbcd2ta" path="res://resources/enemy_resource.gd" id="1_d2d3c"]
+
+[resource]
+script = ExtResource("1_d2d3c")
+enemy_name = "big_slime"
+accelleration = 800.0
+friction = 1.0
+jump_velocity = -400.0
+jump_rate = 3.0
+health = 100.0
+fire_rate = 0.1
+fire_range = 15
+metadata/_custom_type_script = "uid://c37u4phbcd2ta"

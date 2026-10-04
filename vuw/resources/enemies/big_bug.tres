@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="enemy_resource" format=3 uid="uid://dqacinatkojtv"]
+
+[ext_resource type="Script" uid="uid://c37u4phbcd2ta" path="res://resources/enemy_resource.gd" id="1_lbjeo"]
+
+[resource]
+script = ExtResource("1_lbjeo")
+enemy_name = "big_bug"
+accelleration = 1400.0
+jump_velocity = -300.0
+health = 60.0
+damage = 3.5
+fire_rate = 0.8
+metadata/_custom_type_script = "uid://c37u4phbcd2ta"

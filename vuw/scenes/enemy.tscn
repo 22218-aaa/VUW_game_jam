@@ -9,6 +9,7 @@ size = Vector2(32, 32)
 
 [sub_resource type="Animation" id="Animation_7ddre"]
 length = 0.001
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -61,6 +62,26 @@ region = Rect2(64, 16, 32, 32)
 atlas = ExtResource("3_4ra3w")
 region = Rect2(96, 16, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0v4q"]
+atlas = ExtResource("3_4ra3w")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xtgg"]
+atlas = ExtResource("3_4ra3w")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dco1u"]
+atlas = ExtResource("3_4ra3w")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0c1w2"]
+atlas = ExtResource("3_4ra3w")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddmia"]
+atlas = ExtResource("3_4ra3w")
+region = Rect2(192, 48, 48, 48)
+
 [node name="enemy" type="CharacterBody2D" unique_id=1463968285]
 texture_filter = 1
 collision_layer = 4
@@ -87,6 +108,7 @@ texture = SubResource("AtlasTexture_g2els")
 
 [node name="tank" type="Sprite2D" parent="." unique_id=836161820]
 visible = false
+texture_filter = 1
 texture = SubResource("AtlasTexture_lknxi")
 
 [node name="slime" type="Sprite2D" parent="." unique_id=941187034]
@@ -98,6 +120,31 @@ texture = SubResource("AtlasTexture_2few1")
 visible = false
 texture_filter = 1
 texture = SubResource("AtlasTexture_msyeo")
+
+[node name="big_bug" type="Sprite2D" parent="." unique_id=2054528696]
+visible = false
+texture_filter = 1
+texture = SubResource("AtlasTexture_i0v4q")
+
+[node name="big_tank" type="Sprite2D" parent="." unique_id=289089190]
+visible = false
+texture_filter = 1
+texture = SubResource("AtlasTexture_4xtgg")
+
+[node name="big_slime" type="Sprite2D" parent="." unique_id=944180408]
+visible = false
+texture_filter = 1
+texture = SubResource("AtlasTexture_dco1u")
+
+[node name="big_robot" type="Sprite2D" parent="." unique_id=919708092]
+visible = false
+texture_filter = 1
+texture = SubResource("AtlasTexture_0c1w2")
+
+[node name="boss" type="Sprite2D" parent="." unique_id=815630463]
+visible = false
+texture_filter = 1
+texture = SubResource("AtlasTexture_ddmia")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="jump timer" to="." method="_on_jump_timer_timeout"]

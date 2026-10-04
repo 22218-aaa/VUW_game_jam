@@ -22,6 +22,7 @@ const BULLET = preload("uid://ciua73xce7h8j")
 @onready var reload_timer: Timer = $reload_timer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var label: Label = $Label
+@onready var sprite: Sprite2D = $Sprite2D
 
 
 func _input(_event: InputEvent) -> void:
@@ -61,6 +62,11 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	velocity.x += ((direction * ACCELLERATION) - (velocity.x * FRICTION)) * delta
 	
+	
+	if position.x < get_global_mouse_position().x:
+		sprite.set_flip_h(false)
+	else:
+		sprite.set_flip_h(true)
 	
 	move_and_slide()
 

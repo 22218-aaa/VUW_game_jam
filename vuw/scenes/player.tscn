@@ -59,7 +59,7 @@ shape = SubResource("RectangleShape2D_7ddre")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2010365791]
 texture_filter = 1
-position = Vector2(0, -2.3841858e-07)
+position = Vector2(-4.7683716e-07, 4.7683716e-07)
 scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_qowwa")
 
