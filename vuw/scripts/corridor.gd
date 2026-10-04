@@ -15,5 +15,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if $player.position.x>2222:
-		Global.man+=1
+		Global.number+=1
 		get_tree().change_scene_to_file("res://scenes/test_scene.tscn")
