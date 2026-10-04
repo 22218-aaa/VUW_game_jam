@@ -90,8 +90,8 @@ func _physics_process(delta: float) -> void:
 
 
 func movement(delta):
-	player_distance = position.distance_to(player.position)
-	direction = (player.position - position).normalized()
+	player_distance = global_position.distance_to(player.global_position)
+	direction = (player.global_position - global_position).normalized()
 	velocity.x += ((direction.x * stats.accelleration) - (velocity.x * stats.friction)) * delta
 	
 	if direction.x < 0:
@@ -105,8 +105,8 @@ func fire():
 	inst.damage = stats.damage
 	inst.speed = direction * stats.bullet_speed
 	get_parent().add_child(inst)
-	inst.position = position
-	inst.look_at(player.position)
+	inst.global_position = global_position
+	inst.look_at(player.global_position)
 	inst.set_collision_mask_value(2, true)
 	inst.sprite.modulate = Color(1.0, 0.0, 0.0, 1.0)
 	loaded = false

@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bdp0e6vw64a66" path="res://scenes/player.tscn" id="3_nd71p"]
 [ext_resource type="Resource" uid="uid://btude5mehsq7a" path="res://resources/enemies/tank.tres" id="3_wtsjf"]
 [ext_resource type="PackedScene" uid="uid://cdcs6wqrrjmco" path="res://scenes/enemy.tscn" id="4_3qnke"]
-[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://Assets/Background.png" id="4_7ddre"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="4_qjeyg"]
+[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://assets/Background.png" id="4_7ddre"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="4_qjeyg"]
 [ext_resource type="Resource" uid="uid://dqacinatkojtv" path="res://resources/enemies/big_bug.tres" id="4_u0xbq"]
 [ext_resource type="Resource" uid="uid://bgwidehwfnbis" path="res://resources/enemies/robot.tres" id="6_h3xc6"]
 [ext_resource type="Resource" uid="uid://b2lejuacrvry4" path="res://resources/enemies/big_robot.tres" id="7_pln1h"]
@@ -2644,7 +2644,7 @@ stats = ExtResource("12_qq5q4")
 
 [node name="player" parent="." unique_id=551150314 instance=ExtResource("3_nd71p")]
 z_index = 2
-position = Vector2(74, 306)
+position = Vector2(1240, 320)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=709393463]
