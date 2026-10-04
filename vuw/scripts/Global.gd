@@ -10,7 +10,8 @@ extends Node
 @export var man:int=4
 
 func _process(delta: float) -> void:
-	if man==0:
+	if man==1:
+		energy+=20
 		man=4
 		get_tree().change_scene_to_file("res://scenes/corridor.tscn")
 	if number>11:
