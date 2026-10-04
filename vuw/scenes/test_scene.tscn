@@ -2633,13 +2633,13 @@ stats = ExtResource("10_hf2sn")
 [node name="enemy42" parent="Node2D12" unique_id=1418162029 instance=ExtResource("4_3qnke")]
 z_index = 1
 texture_filter = 0
-position = Vector2(307, 62)
+position = Vector2(312, 55)
 stats = ExtResource("9_8gixj")
 
 [node name="enemy43" parent="Node2D12" unique_id=174252971 instance=ExtResource("4_3qnke")]
 z_index = 1
 texture_filter = 0
-position = Vector2(165, 60)
+position = Vector2(165, 54)
 stats = ExtResource("4_u0xbq")
 
 [node name="enemy44" parent="Node2D12" unique_id=2038868931 instance=ExtResource("4_3qnke")]
