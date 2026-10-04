@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://crsgvfy1r1fhe"]
 
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="1_lx5au"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="1_lx5au"]
 [ext_resource type="Script" uid="uid://bustfh61idhyu" path="res://scripts/shop.gd" id="1_xfvoa"]
-[ext_resource type="Texture2D" uid="uid://s4kbxuq7sa0q" path="res://assets/VUW_jam_new_sprites.png" id="3_1l46r"]
+[ext_resource type="Texture2D" uid="uid://s4kbxuq7sa0q" path="res://Assets/VUW_jam_new_sprites.png" id="3_1l46r"]
 [ext_resource type="Script" uid="uid://jdj28omq0idp" path="res://scripts/business_man.gd" id="3_032fp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfvoa"]
@@ -203,25 +203,31 @@ offset_top = 124.0
 offset_right = 190.0
 offset_bottom = 147.0
 theme_override_font_sizes/font_size = 10
-text = "Costs 10 Energy"
+text = "Costs 10 Energy
++10 attack"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="Control" unique_id=1941808148]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.1
+anchor_right = 0.575
+anchor_bottom = 0.425
 offset_left = 172.0
 offset_top = 122.0
 offset_right = 242.0
 offset_bottom = 136.0
 theme_override_font_sizes/font_size = 10
-text = "Costs 5 Energy"
+text = "Costs 5 Energy
++10 Energy Capacity"
 metadata/_edit_use_anchors_ = true
 
 [node name="business_man" type="Area2D" parent="." unique_id=7190147]
-position = Vector2(448, 216)
+position = Vector2(386, 216)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("3_032fp")
-phrases = Array[String](["Would you like some well priced wares?", "business business", "money?", "I may have some items you'd like!"])
+phrases = Array[String](["Hello Agent, great job defeating those guys", "Now you can use your energy to buy attack and defense bonuses to your suit", "Best of luck in your mission, the fate of the Aranta lie in your capable hands"])
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="business_man" unique_id=743428986]
