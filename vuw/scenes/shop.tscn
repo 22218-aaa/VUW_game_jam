@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://crsgvfy1r1fhe"]
 
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="1_lx5au"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="1_lx5au"]
 [ext_resource type="Script" uid="uid://bustfh61idhyu" path="res://scripts/shop.gd" id="1_xfvoa"]
+[ext_resource type="Texture2D" uid="uid://s4kbxuq7sa0q" path="res://assets/VUW_jam_new_sprites.png" id="3_1l46r"]
+[ext_resource type="Script" uid="uid://jdj28omq0idp" path="res://scripts/business_man.gd" id="3_032fp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfvoa"]
 texture = ExtResource("1_lx5au")
@@ -115,6 +117,15 @@ region = Rect2(176, 32, 16, 16)
 atlas = ExtResource("1_lx5au")
 region = Rect2(112, 48, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2few1"]
+atlas = ExtResource("3_1l46r")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lknxi"]
+size = Vector2(96, 40)
+
+[sub_resource type="LabelSettings" id="LabelSettings_msyeo"]
+
 [node name="Shop" type="Node2D" unique_id=1733443330]
 script = ExtResource("1_xfvoa")
 
@@ -130,6 +141,7 @@ offset_right = 187.0
 offset_bottom = 91.0
 text = "Shop"
 icon = SubResource("AtlasTexture_gc17x")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=402895878]
 offset_left = 32.0
@@ -137,12 +149,14 @@ offset_top = 32.0
 offset_right = 272.0
 offset_bottom = 55.0
 texture = SubResource("ViewportTexture_gc17x")
+metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="." unique_id=1098047531]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=2066600770]
 layout_mode = 0
@@ -151,6 +165,7 @@ offset_top = 57.0
 offset_right = 267.0
 offset_bottom = 202.0
 color = Color(0.25808161, 0.25808161, 0.25808161, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="Control" unique_id=2018973779]
 texture_filter = 1
@@ -160,6 +175,7 @@ offset_top = 57.0
 offset_right = 266.0
 offset_bottom = 81.0
 icon = SubResource("AtlasTexture_bto3x")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="Control" unique_id=1367570126]
 texture_filter = 1
@@ -169,6 +185,7 @@ offset_top = 93.0
 offset_right = 115.0
 offset_bottom = 117.0
 icon = SubResource("AtlasTexture_j1yus")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button4" type="Button" parent="Control" unique_id=875616472]
 layout_mode = 0
@@ -177,6 +194,7 @@ offset_top = 93.0
 offset_right = 216.0
 offset_bottom = 117.0
 icon = SubResource("AtlasTexture_gg1dn")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Control" unique_id=744368773]
 layout_mode = 0
@@ -186,6 +204,7 @@ offset_right = 190.0
 offset_bottom = 147.0
 theme_override_font_sizes/font_size = 10
 text = "Costs 10 Energy"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="Control" unique_id=1941808148]
 layout_mode = 0
@@ -195,6 +214,36 @@ offset_right = 242.0
 offset_bottom = 136.0
 theme_override_font_sizes/font_size = 10
 text = "Costs 5 Energy"
+metadata/_edit_use_anchors_ = true
+
+[node name="business_man" type="Area2D" parent="." unique_id=7190147]
+position = Vector2(448, 216)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_032fp")
+phrases = Array[String](["Would you like some well priced wares?", "business business", "money?", "I may have some items you'd like!"])
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="business_man" unique_id=743428986]
+texture_filter = 1
+position = Vector2(-7.6293945e-06, -8.000008)
+scale = Vector2(2.000001, 2.000001)
+texture = SubResource("AtlasTexture_2few1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="business_man" unique_id=907669867]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_lknxi")
+
+[node name="Label" type="Label" parent="business_man" unique_id=1376609430]
+offset_left = -128.0
+offset_top = -144.0
+offset_right = 128.0
+offset_bottom = -95.0
+label_settings = SubResource("LabelSettings_msyeo")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="body_entered" from="business_man" to="business_man" method="_on_body_entered"]
+[connection signal="body_exited" from="business_man" to="business_man" method="_on_body_exited"]
