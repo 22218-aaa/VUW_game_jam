@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://crsgvfy1r1fhe"]
 
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="1_lx5au"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="1_lx5au"]
 [ext_resource type="Script" uid="uid://bustfh61idhyu" path="res://scripts/shop.gd" id="1_xfvoa"]
-[ext_resource type="Texture2D" uid="uid://s4kbxuq7sa0q" path="res://Assets/VUW_jam_new_sprites.png" id="3_1l46r"]
+[ext_resource type="Texture2D" uid="uid://s4kbxuq7sa0q" path="res://assets/VUW_jam_new_sprites.png" id="3_1l46r"]
 [ext_resource type="Script" uid="uid://jdj28omq0idp" path="res://scripts/business_man.gd" id="3_032fp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfvoa"]
@@ -107,14 +107,6 @@ sources/0 = SubResource("TileSetAtlasSource_xfvoa")
 atlas = ExtResource("1_lx5au")
 region = Rect2(32, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j1yus"]
-atlas = ExtResource("1_lx5au")
-region = Rect2(176, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gg1dn"]
-atlas = ExtResource("1_lx5au")
-region = Rect2(112, 48, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_2few1"]
 atlas = ExtResource("3_1l46r")
 region = Rect2(16, 0, 16, 16)
@@ -174,50 +166,55 @@ offset_bottom = 81.0
 icon = SubResource("AtlasTexture_bto3x")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button3" type="Button" parent="Control" unique_id=1367570126]
-texture_filter = 1
-layout_mode = 0
-offset_left = 91.0
-offset_top = 93.0
-offset_right = 115.0
-offset_bottom = 117.0
-icon = SubResource("AtlasTexture_j1yus")
-metadata/_edit_use_anchors_ = true
-
-[node name="Button4" type="Button" parent="Control" unique_id=875616472]
-layout_mode = 0
-offset_left = 192.0
-offset_top = 93.0
-offset_right = 216.0
-offset_bottom = 117.0
-icon = SubResource("AtlasTexture_gg1dn")
-metadata/_edit_use_anchors_ = true
-
 [node name="Label" type="Label" parent="Control" unique_id=744368773]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.7
+anchor_top = 0.1
+anchor_right = -0.7
+anchor_bottom = 0.3
 offset_left = 68.0
 offset_top = 124.0
 offset_right = 190.0
 offset_bottom = 147.0
 theme_override_font_sizes/font_size = 10
 text = "Costs 10 Energy
-+10 attack"
++5 attack"
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="Control" unique_id=1941808148]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.1
-anchor_right = 0.575
-anchor_bottom = 0.425
+anchor_left = -0.5
+anchor_top = 0.15
+anchor_right = 0.375
+anchor_bottom = 0.575
 offset_left = 172.0
 offset_top = 122.0
 offset_right = 242.0
 offset_bottom = 136.0
 theme_override_font_sizes/font_size = 10
 text = "Costs 5 Energy
-+10 Energy Capacity"
++8 Energy Capacity"
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="attack" type="Button" parent="Control" unique_id=1987275491]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_top = 88.0
+offset_right = 112.0
+offset_bottom = 112.0
+
+[node name="capacity" type="Button" parent="Control" unique_id=1134613276]
+texture_filter = 1
+layout_mode = 0
+offset_left = 192.0
+offset_top = 88.0
+offset_right = 216.0
+offset_bottom = 112.0
 
 [node name="business_man" type="Area2D" parent="." unique_id=7190147]
 position = Vector2(386, 216)
@@ -248,5 +245,7 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Control/capacity" to="." method="_on_capacity_pressed"]
 [connection signal="body_entered" from="business_man" to="business_man" method="_on_body_entered"]
 [connection signal="body_exited" from="business_man" to="business_man" method="_on_body_exited"]
