@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://d0d7givnx4q4n"]
 
-[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://Assets/Background.png" id="1_ehuit"]
-[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://Assets/VUW_game_jam_basics.png" id="2_5mrt3"]
+[ext_resource type="Texture2D" uid="uid://bekf8b2j3ydui" path="res://assets/Background.png" id="1_ehuit"]
+[ext_resource type="Texture2D" uid="uid://ckpa2jam5idyf" path="res://assets/VUW_game_jam_basics.png" id="2_5mrt3"]
 [ext_resource type="PackedScene" uid="uid://bdp0e6vw64a66" path="res://scenes/player.tscn" id="3_rwowx"]
 [ext_resource type="PackedScene" uid="uid://btr6qct6qe6bc" path="res://scenes/control.tscn" id="4_5mrt3"]
+[ext_resource type="Script" uid="uid://ccggcs364ok4a" path="res://scripts/corridor_camera.gd" id="4_rwowx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hu44a"]
 texture = ExtResource("1_ehuit")
@@ -2188,14 +2189,23 @@ layer_0/tile_data = PackedInt32Array(65535, 655360, 0, 131070, 458752, 0, 196606
 [node name="player" parent="." unique_id=551150314 instance=ExtResource("3_rwowx")]
 position = Vector2(31, 332)
 
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=247415406]
-position = Vector2(-89, -141)
-zoom = Vector2(0.85, 0.85)
-limit_left = -63
-limit_right = 1535
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1893600071]
+position = Vector2(212, 204)
+script = ExtResource("4_rwowx")
+min_x = 208
+max_x = 1264
+metadata/_edit_group_ = true
 
+<<<<<<< HEAD
+[node name="Main Menu" parent="Camera2D" unique_id=1021446545 instance=ExtResource("4_5mrt3")]
+offset_left = -240.00002
+offset_top = -180.0
+offset_right = -240.00002
+offset_bottom = -180.0
+=======
 [node name="Main Menu" parent="player/Camera2D" unique_id=1021446545 instance=ExtResource("4_5mrt3")]
 offset_left = 29.999989
 offset_top = -209.00003
 offset_right = 29.999989
 offset_bottom = -209.00003
+>>>>>>> bf6398afea33280e5f855a49af17f064855f4d8a

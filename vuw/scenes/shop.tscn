@@ -101,8 +101,6 @@ texture = ExtResource("1_lx5au")
 [sub_resource type="TileSet" id="TileSet_gc17x"]
 sources/0 = SubResource("TileSetAtlasSource_xfvoa")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gc17x"]
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_gc17x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bto3x"]
@@ -140,7 +138,6 @@ offset_top = 60.0
 offset_right = 187.0
 offset_bottom = 91.0
 text = "Shop"
-icon = SubResource("AtlasTexture_gc17x")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=402895878]
