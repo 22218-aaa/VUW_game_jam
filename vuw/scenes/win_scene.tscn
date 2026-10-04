@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5kpbryioyabu"]
 
-[ext_resource type="Texture2D" uid="uid://s4kbxuq7sa0q" path="res://assets/VUW_jam_new_sprites.png" id="1_p78a6"]
+[ext_resource type="Texture2D" uid="uid://s4kbxuq7sa0q" path="res://Assets/VUW_jam_new_sprites.png" id="1_p78a6"]
 
 [sub_resource type="Animation" id="Animation_aw8vk"]
 length = 0.001
@@ -19,6 +19,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_ecqtd"]
 resource_name = "success"
+length = 3.0
 step = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -93,7 +94,7 @@ texture = ExtResource("1_p78a6")
 region_enabled = true
 region_rect = Rect2(96, 48, 48, 48)
 
-[node name="AnimationTree" type="AnimationTree" parent="." unique_id=2104161406]
+[node name="Player" type="AnimationPlayer" parent="." unique_id=630474838]
 libraries/ = SubResource("AnimationLibrary_7yt3q")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1795491726]
