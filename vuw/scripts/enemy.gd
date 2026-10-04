@@ -98,11 +98,12 @@ func damaged(bullet_damage):
 	stats.health -= bullet_damage
 	animation_player.play("hurt")
 	if stats.health <= 0.0:
+		death()
 		queue_free()
 
 
 func death():
-	get_tree().change_scene_to_file("res://scenes/corridor.tscn")
+	Global.man-=1
 
 
 
